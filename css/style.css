@@ -7,6 +7,166 @@ body{
   background-size: cover;
   background-repeat: no-repeat; 
 
+/*common css*/
+body{
+  font-family: SourceSansPro;
+  background: url(../img/bg.png);
+  background-position: 0 4%;
+  background-size: cover;
+  background-repeat: no-repeat; 
+
+}
+
+.navbar{
+  background: white
+} 
+.navbar-brand{
+      position: relative;
+    margin-left: 5%;
+}
+.navbar-brand img{
+      position: absolute;
+    top: -19px;
+}
+li.nav-item{
+  text-align: right;
+}
+.bg-light {
+    background-color: #ffffff !important;
+}
+.center-border{
+}
+.left-partition{
+    padding: 0;
+}
+.right-partition{
+  background:#ffffff;
+  color:#4a4a4a;
+}
+.carousal-row{
+  margin-left: -20px;
+}
+.carousal-padding-0{
+  padding: 0;
+}
+#carouselExampleIndicators{
+  height: 100%;
+}
+
+.carousel-inner{
+  height: 100%;
+}
+
+.carousel-inner .w-100 {
+    width: 101%!important;
+}
+.carousel-item{
+  height: 100%
+}
+img.d-block.w-100 {
+    height: 36em;
+}
+/*img.d-block.w-100 {
+    height: 14em;
+}*/
+.footer-section{
+      position: fixed;
+    bottom: 0;
+    display: block;
+    width: 100%;
+}
+.footer-copyright{
+  background: #f5a623;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+    color: #ffffff !important;
+}
+.footer-copyright a{ 
+    color: #ffffff !important;
+}
+.nav-only-cell{
+  display: none;
+}
+@media (max-width: 575px) { 
+
+ /* body{
+    color:red;
+   }*/
+   img.d-block.w-100 {
+    height: 14em !important;
+}
+.nav-only-cell{
+  display: block !important;
+  }
+  .right-partition {
+      margin: 0 8px 20px;
+      padding: 8px;
+      width: 95%;
+  }
+}
+/*
+// Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767px) { 
+  .nav-only-cell{
+  display: block !important;
+  }
+  }
+/*
+// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .nav-only-cell{
+  display: block !important;
+  }
+  .captcha-container{
+    max-width: 100%
+  }
+
+ }
+/*
+// Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199px) { 
+  body{
+    padding-bottom: 5%;
+  }
+  .main-area{
+    margin-top:2%;
+  }
+ }
+/*
+// Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {  
+  body{
+    padding-bottom: 5%;
+  }
+  .main-area{
+    margin-top:2%;
+  }
+}
+
+
+/*form css*/
+input::placeholder{
+    color:#929699;
+    font-size:0.9em;
+}
+.red-t , .navbar-light .navbar-nav .nav-link{
+  color: #d51a1b !important;
+}
+.gray-t{
+  color:#4a4a4a !important;
+}
+.btn-submit{
+  border-radius: 0.2em; 
+  background-color: #d51a1b;
+  width: 100%;
+  color:white;
+}
+.err-msg{
+  background:#ffe1e5;
+  color: #e74c3c;
+      border-radius: 6em;
+    padding: 5px 36px;
+    text-align: center;
+}
 }
 
 .navbar{
