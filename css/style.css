@@ -61,6 +61,10 @@ img.d-block.w-100 {
 /*img.d-block.w-100 {
     height: 14em;
 }*/
+
+.NotValid{
+  visibility: hidden;
+}
 .term-container{
   background: #ffffff;
   color: #4a4a4a;
@@ -156,7 +160,7 @@ img.d-block.w-100 {
     padding-bottom: 5%;
   }
   .main-area{
-    margin-top:8%;
+    margin-top:5%;
   }
  
  }
@@ -167,7 +171,7 @@ img.d-block.w-100 {
     padding-bottom: 5%;
   }
   .main-area{
-    margin-top:8%;
+    margin-top:5%;
   }
 }
 
