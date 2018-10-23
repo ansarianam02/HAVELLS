@@ -4,13 +4,11 @@ body{
   font-family: SourceSansPro;
   background: url(../img/bg.png);
   background-position: 0 4%;
-  background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat; 
 
 }
-.main-area{
-  
-}
+
 .navbar{
   background: white
 } 
@@ -35,6 +33,7 @@ li.nav-item{
 }
 .right-partition{
   background:#ffffff;
+  color:#4a4a4a;
 }
 #carouselExampleIndicators{
   height: 100%;
@@ -84,7 +83,7 @@ img.d-block.w-100 {
 .nav-only-cell{
   display: block !important;
   }
-  .right-partition, .left-partition {
+  .right-partition {
       margin: 0 8px 20px;
       padding: 8px;
       width: 95%;
@@ -114,12 +113,18 @@ img.d-block.w-100 {
   body{
     padding-bottom: 5%;
   }
+  .main-area{
+    margin-top:2%;
+  }
  }
 /*
 // Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {  
   body{
     padding-bottom: 5%;
+  }
+  .main-area{
+    margin-top:2%;
   }
 }
 
