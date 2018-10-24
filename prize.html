@@ -49,11 +49,13 @@
 <div class="container main-area">
   <div class="row center-border justify-content-md-center ">
     <!--first partion -->
-    <div class="col-md-10 py-5">
+    <div class="col-md-10 pt-5 pb-3">
       <div class="stage">
        <div class="row justify-content-md-center ">
        
-
+        <p class="congrats-msg red-t my-4">
+          You have won an exciting gift (reward name). We’ll send you the details through your registered SMS/Email
+        </p>
        <div class="doorContainer">
         <div class="doorStation ">
             <div class="closedoor"></div>
@@ -70,6 +72,18 @@
 
 
   </div>
+
+
+  <!-- button -->
+  <div class="row center-border justify-content-md-center section-redirect">
+      <div class="col-md-10 text-center">
+         <button type="button" class="btn btn-redirect" href="index.html">Close</button>
+         <p class="redirect-msg">Redirecting to home page in 00:10 seconds</p>
+      </div>
+    </div>
+  </div>
+
+    <!-- -->
 </div>
  <!-- end main partion -->
 <section class="nav-only-cell mt-5">
@@ -100,19 +114,38 @@
 <script type="text/javascript">
 
   $(document).on('click','.doorStation',function(){
-      $('.closedoor').fadeTo('slow', 1.6, function()
+      $('.closedoor').fadeTo('slow', 1, function()
       {
         //change Door Image
           $(this).css('background-image', 'url(img/open.png)');
 
-      }).delay(500).fadeTo(500, 1,function(){
+
+      }).fadeTo(500, 1,function(){
         //show Gift
         $( ".prize" ).animate({
+                opacity: 1,   
+          }, 100 ).animate({
                 width: "70%",height: "50%",left: "15%",top: "21%" ,opacity: 1,   
-          }, 100 );
+          }, 1500 ,function(){
+            //after gift open
+             $('.stage').addClass('stage-congrats');
+          $('.congrats-msg').css('visibility','visible');
+             $('.congrats-msg').animate({              
+               opacity:1 
+             },1500);
+           $('.section-redirect').animate({
+                opacity: 1
+               }, 1500 );
+          });
+
+         
       });
   });   
 
+
+  $(document).on('click','.btn-redirect',function(){ alert('clickeddddd');
+      window.location.href = "index.html";
+  })
 </script>
 
 </html>
