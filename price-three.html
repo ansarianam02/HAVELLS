@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HAVELLS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <!-- Brand -->
+  <a class="navbar-brand" href="#">
+    <img src="img/icon/icon.png" class="d-inline-block align-top" alt="">    
+  </a>
+
+  <div class="float-right red-t d-none d-md-block d-lg-block">
+    <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3  red-t" href="https://github.com/twbs/bootstrap/archive/v4.0.0.zip">Terms and conditions</a>
+    <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3  red-t" href="https://github.com/twbs/bootstrap/archive/v4.0.0.zip">Contact us</a>
+  </div>
+
+  <button class="navbar-toggler navbar-toggler-right nav-only-cell" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+
+
+  <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Terms and conditions</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Contact us</a>
+            </li>
+        </ul>
+    </div>
+   
+</nav>
+
+ <!--main partion -->
+
+<div class="container main-area">
+  <div class="row center-border justify-content-md-center ">
+    <!--first partion -->
+    <div class="col-md-10 pt-5 pb-3">
+      <div class="stage">
+       <div class="row justify-content-md-center ">
+       
+        <p class="congrats-msg red-t my-4">
+          You have won an exciting gift (reward name). We’ll send you the details through your registered SMS/Email
+        </p>
+        <div class="col-md">
+        <div class="row"> 
+        <!-- first -->
+        <div class="col-md-4">
+       
+        <div class="doorContainer two-door-section">
+        <div class="doorStation first" id="first">
+            <div class="closedoor first"  ></div>
+            <div class="prize first"></div>
+        </div>
+       </div>
+      </div>
+      <!-- end first-->
+
+        <!-- second -->
+        <div class="col-md-4">
+       
+        <div class="doorContainer two-door-section" >
+        <div class="doorStation second"  id="second">
+            <div class="closedoor second"></div>
+            <div class="prize second"></div>
+        </div>
+       </div>
+      </div>
+      <!-- end second-->
+
+
+        <!-- third -->
+        <div class="col-md-4">
+       
+        <div class="doorContainer two-door-section" >
+        <div class="doorStation second"  id="third">
+            <div class="closedoor second"></div>
+            <div class="prize second"></div>
+        </div>
+       </div>
+      </div>
+      <!-- end third-->
+
+      </div>
+      </div>
+      </div>
+    </div>
+
+    </div>
+   
+     <!--end second partion -->
+
+
+  </div>
+
+
+  <!-- button -->
+  <div class="row center-border justify-content-md-center section-redirect">
+      <div class="col-md-10 text-center">
+         <button type="button" class="btn btn-redirect" href="index.html">Close</button>
+         <p class="redirect-msg">Redirecting to home page in 00:10 seconds</p>
+      </div>
+    </div>
+  </div>
+
+    <!-- -->
+</div>
+ <!-- end main partion -->
+<section class="nav-only-cell mt-5">
+   <!-- Copyright -->
+      <div class="footer-copyright text-center py-2"> All rights reserved, 
+        <a href="https://mdbootstrap.com/bootstrap-tutorial/">Bigcity Promotions, 2018</a>
+      </div>
+      <!-- Copyright -->
+</section>
+<section class="footer-section d-none d-sm-block  d-none d-md-block d-lg-block">
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue pt-4">
+
+      
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-2"> All rights reserved, 
+        <a href="https://mdbootstrap.com/bootstrap-tutorial/">Bigcity Promotions, 2018</a>
+      </div>
+      <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+  </section>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</body>
+<script type="text/javascript">
+  var  runOnce = false;
+  $(document).on('click','.doorStation',function(){
+
+      if(runOnce)
+            return true;
+
+      var selectedDoor = $(this).attr('id');
+        console.log('selected id '+selectedDoor);
+      $('.'+selectedDoor+' .closedoor').fadeTo('slow', 1, function()
+      {
+        //change Door Image
+          $(this).css('background-image', 'url(img/open.png)');
+
+
+      }).fadeTo(500, 1,function(){
+        //show Gift
+        $( "."+selectedDoor+" .prize" ).animate({
+                opacity: 1,   
+          }, 100 ).animate({
+                width: "70%",height: "50%",left: "15%",top: "21%" ,opacity: 1,   
+          }, 1500 ,function(){
+            //after gift open
+             $('.stage').addClass('stage-congrats');
+          $('.congrats-msg').css('visibility','visible');
+             $('.congrats-msg').animate({              
+               opacity:1 
+             },1500);
+           $('.section-redirect').animate({
+                opacity: 1
+               }, 1500 );
+          });
+
+         
+      });
+      runOnce = true;
+  });   
+
+
+  $(document).on('click','.btn-redirect',function(){ alert('clickeddddd');
+      window.location.href = "index.html";
+  })
+</script>
+<style type="text/css">
+ .doorStation {
+    width: 300px ;
+  } 
+  .center-border  {
+    background: url(../img/stage.png) !important;
+    background-size: 100% 100%  !important;
+}
+
+.stage {
+    background: none !important;
+}
+@media (max-width: 575px) { 
+   .center-border  {
+    background: none !important;
+    }
+    .doorStation {
+    width: 170px !important;
+    }
+}
+/*
+// Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767px) { 
+  .center-border  {
+    background: none !important;
+    }
+    .doorStation {
+    width: 170px !important;
+    }
+
+  }
+</style>
+</html>
