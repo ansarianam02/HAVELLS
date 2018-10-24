@@ -107,10 +107,21 @@ img.d-block.w-100 {
       background: url(../img/stageM.png) !important;
       background-size: 100% 100% !important;
       background-repeat: no-repeat !important;
-      padding-top: 53% !important;
-      padding-bottom: 15% !important;
-       padding-left: 33%;
+         padding-top: 85% !important;
+    padding-bottom: 15% !important;
+    padding-left: 30%;
+    position: relative;
 
+  }
+  .stage-congrats{
+      background: url(../img/stageM-congrats.png) !important;
+      background-size: 100% 100% !important;   
+  }
+  .congrats-msg{
+    position: absolute;
+    top: 118px;
+    left: 27px;
+    padding: 0px 9px;
   }
   .doorStation {
         width: 168px !important;
@@ -137,9 +148,21 @@ img.d-block.w-100 {
       background: url(../img/stageM.png) !important;
       background-size:100% 100% !important;
       background-repeat: no-repeat !important;
-      padding-top: 53% !important;
+      padding-top: 85% !important;
       padding-bottom: 15% !important;
       padding-left: 31%;
+      position: relative;
+  }
+   .stage-congrats{
+      background: url(../img/stageM-congrats.png) !important;
+      background-size: 100% 100% !important;   
+  }
+  .congrats-msg{
+    position: absolute;
+    top: 118px;
+    left: 27px;
+    padding: 0px 9px;
+
   }
   }
 /*
@@ -160,7 +183,7 @@ img.d-block.w-100 {
     padding-bottom: 5%;
   }
   .main-area{
-    margin-top:5%;
+    margin-top:2%;
   }
  
  }
@@ -171,7 +194,7 @@ img.d-block.w-100 {
     padding-bottom: 5%;
   }
   .main-area{
-    margin-top:5%;
+    margin-top:2%;
   }
 }
 
@@ -240,4 +263,25 @@ input::placeholder{
     background-size: 100% 100%;
         padding-top: 20%;
     padding-bottom: 5%;
+  }
+  .stage-congrats{
+         background: url(../img/stage-congrats.png) ;
+    background-size: 100% 100% !important;   
+  }
+  .congrats-msg {
+    visibility: hidden;
+    opacity: 0
+  }
+
+  .btn-redirect{
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 0.3em 1.2em;
+    color: #d51a1b;
+  }
+  .redirect-msg{
+    color: #ffffff;
+  }
+  .section-redirect{
+     opacity: 0
   }
