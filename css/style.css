@@ -87,6 +87,7 @@ img.d-block.w-100 {
 .nav-only-cell{
   display: none;
 }
+
 /*
 //  phones*/
 @media (max-width: 575px) { 
@@ -102,7 +103,7 @@ img.d-block.w-100 {
       padding: 8px;
       width: 95%;
   }
-    .term-main-area{
+  .term-main-area{
     width: 90% !important;
   }
   .stage {
@@ -119,9 +120,35 @@ img.d-block.w-100 {
       background: url(../img/stageM-congrats.png) !important;
       background-size: 100% 100% !important;   
   }
+  .two-door.stage {
+      background: url(../img/stageM2.png) !important;
+      background-size:100% 100% !important;
+      background-repeat: no-repeat !important;
+      padding-top: 85% !important;
+      padding-bottom: 15% !important;
+      padding-left: 31%;
+      position: relative;
+  }
+  .two-door.stage-congrats{
+      background: url(../img/stageM-congrats2.png) !important;
+      background-size: 100% 100% !important;   
+  }
+  .three-door.stage {
+      background: url(../img/stageM3.png) !important;
+      background-size:100% 100% !important;
+      background-repeat: no-repeat !important;
+      padding-top: 85% !important;
+      padding-bottom: 15% !important;
+      padding-left: 31%;
+      position: relative;
+  }
+  .three-door.stage-congrats{
+      background: url(../img/stageM-congrats3.png) !important;
+      background-size: 100% 100% !important;   
+  }
   .congrats-msg{
     position: absolute;
-    top: 118px;
+    top: 128px;
     left: 27px;
     padding: 0px 9px;
   }
@@ -164,6 +191,32 @@ img.d-block.w-100 {
       background: url(../img/stageM-congrats.png) !important;
       background-size: 100% 100% !important;   
   }
+  .two-door.stage {
+      background: url(../img/stageM2.png) !important;
+      background-size:100% 100% !important;
+      background-repeat: no-repeat !important;
+      padding-top: 85% !important;
+      padding-bottom: 15% !important;
+      padding-left: 31%;
+      position: relative;
+  }
+  .two-door.stage-congrats{
+      background: url(../img/stageM-congrats2.png) !important;
+      background-size: 100% 100% !important;   
+  }
+  .three-door.stage {
+      background: url(../img/stageM3.png) !important;
+      background-size:100% 100% !important;
+      background-repeat: no-repeat !important;
+      padding-top: 85% !important;
+      padding-bottom: 15% !important;
+      padding-left: 31%;
+      position: relative;
+  }
+  .three-door.stage-congrats{
+      background: url(../img/stageM-congrats3.png) !important;
+      background-size: 100% 100% !important;   
+  }
   .congrats-msg{
     position: absolute;
     top: 118px;
@@ -187,6 +240,12 @@ img.d-block.w-100 {
   .captcha-container{
     max-width: 100%
   } 
+  .nav-only-cell{
+    display: none !important;
+  }
+  body{
+    background-size: auto;
+  }
  }
 /*
 // Large devices (desktops, 992px and up)*/
@@ -307,4 +366,31 @@ input::placeholder{
 
 .doorStation.two-door-section {
     width: 308px !important;
+  }
+
+
+/*/*seprate door image*/
+/*.three-door.stage{
+    background: url(../img/stage3.png);
+    background-size: 100% 100%;
+    padding-top: 20%;
+    padding-bottom: 5%;
+  }
+.three-door.stage-congrats{
+    background: url(../img/stage-congrats3.png) ;
+    background-size: 100% 100% !important;   
+  }
+  .two-door.stage{
+    background: url(../img/stage3.png);
+    background-size: 100% 100%;
+    padding-top: 20%;
+    padding-bottom: 5%;
+  }
+.three-door.stage-congrats{
+    background: url(../img/stage-congrats3.png) ;
+    background-size: 100% 100% !important;   
+  }*/
+  .navbar-light .navbar-toggler-icon{
+    background-image: url('data:image/svg+xml;charset=utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(213,26,27)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>'');
+
   }
