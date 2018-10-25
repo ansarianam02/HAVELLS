@@ -4,7 +4,7 @@
   <title>HAVELLS</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
@@ -50,7 +50,7 @@
   <div class="row center-border justify-content-md-center ">
     <!--first partion -->
     <div class="col-md-10 pt-5 pb-3">
-      <div class="stage">
+      <div class="two-door stage">
        <div class="row justify-content-md-center ">
        
         <p class="congrats-msg red-t my-4">
@@ -94,16 +94,16 @@
   </div>
 
 
-  <!-- button -->
-  <div class="row center-border justify-content-md-center section-redirect">
-      <div class="col-md-10 text-center">
-         <button type="button" class="btn btn-redirect" href="index.html">Close</button>
-         <p class="redirect-msg">Redirecting to home page in 00:10 seconds</p>
+  <div class="container">
+       <!-- button -->
+    <div class="row mt-3 justify-content-md-center section-redirect">
+        <div class="col-md-10 text-center">
+           <button type="button" class="btn btn-redirect" href="index.html">Close</button>
+           <p class="redirect-msg">Redirecting to home page in 00:10 seconds</p>
+        </div>
       </div>
     </div>
-  </div>
-
-    <!-- -->
+      <!-- -->
 </div>
  <!-- end main partion -->
 <section class="nav-only-cell mt-5">
@@ -154,7 +154,8 @@
                 width: "70%",height: "50%",left: "15%",top: "21%" ,opacity: 1,   
           }, 1500 ,function(){
             //after gift open
-             $('.stage').addClass('stage-congrats');
+             $('.center-border').addClass('center-border-congrats');
+              $('.stage').addClass('stage-congrats');
           $('.congrats-msg').css('visibility','visible');
              $('.congrats-msg').animate({              
                opacity:1 
@@ -170,9 +171,94 @@
   });   
 
 
-  $(document).on('click','.btn-redirect',function(){ alert('clickeddddd');
+  $(document).on('click','.btn-redirect',function(){ 
       window.location.href = "index.html";
   })
 </script>
+<style type="text/css">
+ .doorStation {
+    width: 300px ;
+  } 
+  .center-border  {
+    background: url(img/stage.png) !important;
+    background-size: 100% 100%  !important;
+}
+ .center-border-congrats{
+      background: url(img/stage-congrats.png) !important;
+      background-size: 100% 100% !important;   
+  }
 
+
+@media (max-width: 575px) { 
+   .center-border  {
+    background: none !important;
+    }
+    .doorStation {
+    width: 170px !important;
+    }
+    .center-border {
+      background: none !important;
+  }
+   .center-border-congrats{
+      background: none !important;
+  }
+  .stage {   
+    padding-top: 108% !important;    
+  }
+  .col-door{
+    justify-content: center!important;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .three-door-section{
+    margin-bottom: 20%
+  }
+}
+/*
+// Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767px) { 
+  .center-border  {
+    background: none !important;
+    }
+    .doorStation {
+    width: 170px !important;
+    }
+    .center-border {
+      background: none !important;
+  }
+   .center-border-congrats{
+      background: none !important; 
+  }
+  .three-door-section{
+    margin-bottom: 20%
+  }
+
+  }
+  /* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .stage {
+    background: none !important;
+  } 
+   .doorStation {
+    width: 170px !important;
+    height: 200px;
+    }
+ }
+/*
+// Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199px) { 
+  .stage {
+    background: none !important;
+}
+ }
+/*
+// Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {  
+ .stage {
+    background: none !important;
+}
+}
+
+</style>
 </html>
